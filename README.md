@@ -13,4 +13,6 @@ When *string_to_repeat* is ommitted, "y" will be used as a default.
 
 ## Installing
 Binaries are not given, but you can install Affirmative via the Cargo package manager
-```cargo install affirmative```
+```
+cargo install affirmative
+```
