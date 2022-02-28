@@ -1,7 +1,7 @@
 use std::env;
 use std::process;
 
-const VERSION: &str = "0.1.0";
+const VERSION: &str = "0.1.1";
 
 fn main() {
     let args_vec: Vec<String> = env::args().collect();
