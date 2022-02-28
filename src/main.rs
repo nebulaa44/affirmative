@@ -23,9 +23,22 @@ fn print_ver_if_necessary(arg_vec: &Vec<String>) {
 }
 
 fn string_to_repeat(arg_vec: &Vec<String>) -> String {
-    // The first argument is always the path of the binary being run.
-    match arg_vec.get(1) {
-        None      => String::from("y"),
-        Some(arg) => arg.to_owned()
+    let mut output = String::new();
+    for (i, el) in arg_vec.into_iter().enumerate() {
+        // The first element is always the binary path
+        if i == 0 {
+            continue;
+        }
+
+        if !el.starts_with("-") {
+            output.push_str(el);
+            output.push(' ');
+        } 
     }
+
+    if output.is_empty() {
+        output = String::from("y");
+    }
+
+    output
 }
