@@ -1,7 +1,10 @@
 [package]
+# General metadata
 name = "affirmative"
 version = "0.1.1"
 edition = "2021"
+
+# Crates.io metadata
 license = "GPL-3.0-only"
 readme = "README.md"
 repository = "https://github.com/centaurii44/affirmative"
