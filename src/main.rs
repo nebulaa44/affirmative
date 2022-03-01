@@ -11,13 +11,13 @@ fn main() {
         process::exit(0);
     }
     
-    let repeat_this = string_to_repeat(&args_vec);
+    let repeat_this = get_string_to_repeat(&args_vec);
     loop {
         println!("{repeat_this}");
     }
 }
 
-fn string_to_repeat(arg_vec: &Vec<String>) -> String {
+fn get_string_to_repeat(arg_vec: &Vec<String>) -> String {
     let mut output = String::new();
     for (i, el) in arg_vec.into_iter().enumerate() {
         // The first element is always the binary path
