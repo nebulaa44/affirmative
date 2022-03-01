@@ -1,12 +1,11 @@
 use std::env;
 use std::process;
-
-const VERSION: &str = "0.1.1";
-
 fn main() {
     let args_vec: Vec<String> = env::args().collect();
 
     if args_vec.contains(&String::from("--version")) {
+        const VERSION: &str = env!("CARGO_PKG_VERSION");
+
         println!("{VERSION}");
         process::exit(0);
     }
