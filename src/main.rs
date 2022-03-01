@@ -6,19 +6,14 @@ const VERSION: &str = "0.1.1";
 fn main() {
     let args_vec: Vec<String> = env::args().collect();
 
-    print_ver_if_necessary(&args_vec);
+    if args_vec.contains(&String::from("--version")) {
+        println!("{VERSION}");
+        process::exit(0);
+    }
     
     let repeat_this = string_to_repeat(&args_vec);
     loop {
         println!("{repeat_this}");
-    }
-}
-
-fn print_ver_if_necessary(arg_vec: &Vec<String>) {
-
-    if arg_vec.contains(&String::from("--version")) {
-        println!("{VERSION}");
-        process::exit(0);
     }
 }
 
